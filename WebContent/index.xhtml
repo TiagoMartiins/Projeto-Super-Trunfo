@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://java.sun.com/jsf/html"
+ xmlns:f="http://java.sun.com/jsf/core"
+ xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Usuario</title>
+</h:head>
+<h:body>
+	<tr>
+		<td><h3 style="margin-top:0">Usuario</h3><br/></td><h:outputLabel value="#{jogoMB.jogo.user.pontos}"/>
+		
+		<td><h3 style="margin-top:0">Computador</h3><br/></td><h:outputLabel value="#{jogoMB.jogo.computador.pontos}"/>
+	</tr>
+	
+<table>
+	<tr>
+	<td>
+	
+<p:panelGrid columns="2" >
+    <f:facet name="header">
+        <p:graphicImage width="100" height="100" value="imgs/interrogacao.jpg" />
+    </f:facet>
+     
+    <h:outputText value="Name:" />
+    <h:outputText value="#{jogoMB.jogo.user.personagem.nome}" />
+     
+    <h:outputText value="Habilidades:" />
+    <h:outputText value="#{jogoMB.jogo.user.personagem.habilidades}" />
+     
+    <h:outputText value="Pericias" />
+    <h:outputText value="#{jogoMB.jogo.user.personagem.pericias}" />
+     
+    <h:outputText value="Combate" />
+    <h:outputText value="#{jogoMB.jogo.user.personagem.combate}" />
+</p:panelGrid>
+</td>
+
+<td>
+<p:panelGrid columns="2">
+    <f:facet name="header">
+        <p:graphicImage width="100" height="100" value="imgs/interrogacao.jpg" />
+    </f:facet>
+     
+    <h:outputText value="Name:" />
+    <h:outputText value="?" />
+     
+    <h:outputText value="Habilidades:" />
+    <h:outputText value="?" />
+     
+    <h:outputText value="Pericias" />
+    <h:outputText value="?" />
+     
+    <h:outputText value="Combate" />
+    <h:outputText value="?" />
+</p:panelGrid>
+
+</td>
+</tr>
+</table>
+	<h:form>
+
+		<h:commandButton value="Jogar" action="#{jogoMB.jogo.play}"/>   
+		<h:commandButton value="Novo jogo"  action="#{jogoMB.jogo.restartGame}"/>
+	</h:form>
+</h:body>
+</html>
